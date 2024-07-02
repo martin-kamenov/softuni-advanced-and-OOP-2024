@@ -23,5 +23,5 @@ class ProductRepository:
         if product:
             self.products.remove(product)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return "\n".join(f"{p.name}: {p.quantity}"for p in self.products)
