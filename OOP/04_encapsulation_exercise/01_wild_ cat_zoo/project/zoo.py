@@ -91,6 +91,8 @@ class Zoo:
         #     f"----- {len(lions)} Lions:"
         # ]
         #
+        # ------------------------------------------------------------
+        #
         # result.extend(lions)
         #
         # result.append(f"----- {len(tigers)} Tigers:")
