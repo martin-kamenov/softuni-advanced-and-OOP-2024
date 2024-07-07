@@ -1,6 +1,5 @@
 from typing import List
 
-
 class User:
 
     def __init__(self, user_id: int, username: str):
@@ -9,7 +8,7 @@ class User:
         self.books: List[str] = []
 
     def info(self) -> str:
-        return ', '.join(sorted(book for book in self.books))
+        return ', '.join(sorted(self.books)) or '[]'
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.user_id}, {self.username}, {self.info()}"
