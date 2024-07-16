@@ -1,5 +1,5 @@
 class Mammal:
-    __kingdom = "animals"
+    __kingdom = "02_animals"
 
     def __init__(self, name: str, type: str, sound: str):
         self.name = name

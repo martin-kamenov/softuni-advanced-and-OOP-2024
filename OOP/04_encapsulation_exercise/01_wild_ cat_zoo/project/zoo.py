@@ -65,9 +65,9 @@ class Zoo:
     def animals_status(self) -> str:
         # 2nd way
         #
-        # lions = list(filter(lambda a: a.__class__.__name__ == 'Lion', self.animals))
-        # tigers = list(filter(lambda a: a.__class__.__name__ == 'Tiger', self.animals))
-        # cheetahs = list(filter(lambda a: a.__class__.__name__ == 'Cheetah', self.animals))
+        # lions = list(filter(lambda a: a.__class__.__name__ == 'Lion', self.02_animals))
+        # tigers = list(filter(lambda a: a.__class__.__name__ == 'Tiger', self.02_animals))
+        # cheetahs = list(filter(lambda a: a.__class__.__name__ == 'Cheetah', self.02_animals))
 
 
         # 1st way
@@ -76,7 +76,7 @@ class Zoo:
         # tigers = []
         # cheetahs = []
         #
-        # for animal in self.animals:
+        # for animal in self.02_animals:
         #     if animal.__class__.__name__ == 'Lion':
         #         lions.append(repr(animal))
         #
@@ -87,7 +87,7 @@ class Zoo:
         #         cheetahs.append(repr(animal))
 
         # result = [
-        #     f"You have {len(self.animals)} animals",
+        #     f"You have {len(self.02_animals)} 02_animals",
         #     f"----- {len(lions)} Lions:"
         # ]
         #
