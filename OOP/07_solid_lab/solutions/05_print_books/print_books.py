@@ -33,7 +33,8 @@ class RandomFormatter(BaseFormatter):
 
 
 class Printer:
-    def get_book(self, book: Book, formatter: BaseFormatter):
+    @staticmethod
+    def get_book(book: Book, formatter: BaseFormatter):
         formatted_book = formatter.format(book)
 
         return formatted_book
