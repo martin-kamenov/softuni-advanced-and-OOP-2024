@@ -86,11 +86,11 @@ while True:
 # testmail@mail.it
 # ivan_vr@abv.bg
 # goshomail@gmail.com
-# tests@test@gmail.com
-# test@@mail.bg
+# tests@tests@gmail.com
+# tests@@mail.bg
 # 12test@mail.bg
 # qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqweadsadasdasdasrtyu@abv.bg
-# test test@mail.bg
+# tests tests@mail.bg
 # test_test@abv.bg
-# test-test@test.com
-# test_test@test.com.bg
+# tests-tests@tests.com
+# test_test@tests.com.bg
