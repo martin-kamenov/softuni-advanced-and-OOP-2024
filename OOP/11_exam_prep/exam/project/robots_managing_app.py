@@ -81,7 +81,7 @@ class RobotsManagingApp:
 
     @staticmethod
     def _get_object(object_name: str, collection: List):
-        result = next(filter(lambda x: x.name == object_name, collection))
+        result = next(filter(lambda x: x.name == object_name, collection), None)
         return result
 
     def __str__(self):
