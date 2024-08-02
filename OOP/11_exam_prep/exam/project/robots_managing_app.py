@@ -45,7 +45,7 @@ class RobotsManagingApp:
         if isinstance(robot, FemaleRobot) and not isinstance(service, SecondaryService):
             return "Unsuitable service."
 
-        if service.capacity == len(service.robots):
+        if service.capacity <= len(service.robots):
             raise Exception("Not enough capacity for this robot!")
 
         self.robots.remove(robot)
@@ -85,9 +85,4 @@ class RobotsManagingApp:
         return result
 
     def __str__(self):
-        result = []
-
-        for service in self.services:
-            result.append(service.details())
-
-        return '\n'.join(result)
+        return '\n'.join(s.details() for s in self.services)
