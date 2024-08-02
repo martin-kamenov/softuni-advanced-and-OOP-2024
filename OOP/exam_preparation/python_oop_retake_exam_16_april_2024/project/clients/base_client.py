@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import Tuple
 
 
 class BaseClient(ABC):
@@ -9,32 +10,32 @@ class BaseClient(ABC):
         self.points: int = 0
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.__name
 
     @name.setter
-    def name(self, value):
+    def name(self, value: str):
         if value.strip() == '':
             raise ValueError("Client name should be determined!")
 
         self.__name = value
 
     @property
-    def membership_type(self):
+    def membership_type(self) -> str:
         return self.__membership_type
 
     @membership_type.setter
-    def membership_type(self, value):
-        if value not in ('Regular', 'VIP'):
+    def membership_type(self, value: str):
+        if value not in ['Regular', 'VIP']:
             raise ValueError("Invalid membership type. Allowed types: Regular, VIP.")
 
         self.__membership_type = value
 
     @abstractmethod
     def earning_points(self, order_amount: float):
-        pass
+        ...
 
-    def apply_discount(self):
+    def apply_discount(self) -> Tuple[int, int]:
         discount = 0
 
         if self.points >= 100:

@@ -3,10 +3,13 @@ from project.waiters.base_waiter import BaseWaiter
 
 class HalfTimeWaiter(BaseWaiter):
 
-    HOUR_WAGE = 12
+    def __init__(self, name: str, hours_worked: int):
+        super().__init__(name, hours_worked)
 
-    def calculate_earnings(self):
-        return self.hours_worked * HalfTimeWaiter.HOUR_WAGE
+    @property
+    def hour_wage(self) -> int:
+        return 12
 
-    def report_shift(self):
-        return f"{self.name} worked a half-time shift of {self.hours_worked} hours."
+    @property
+    def waiter_type(self) -> str:
+        return 'half-time'
