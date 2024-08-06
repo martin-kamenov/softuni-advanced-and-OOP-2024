@@ -17,8 +17,7 @@ class BaseRobot(ABC):
     def name(self, value: str):
         if not value.strip():
             raise ValueError("Robot name cannot be empty!")
-
-        self.__name = value
+        self.__name =value
 
     @property
     def kind(self) -> str:
@@ -26,9 +25,8 @@ class BaseRobot(ABC):
 
     @kind.setter
     def kind(self, value: str):
-        if value.strip() == '':
+        if not value.strip():
             raise ValueError("Robot kind cannot be empty!")
-
         self.__kind = value
 
     @property
@@ -37,11 +35,14 @@ class BaseRobot(ABC):
 
     @price.setter
     def price(self, value: float):
-        if value <= 0:
+        if value <= 0.0:
             raise ValueError("Robot price cannot be less than or equal to 0.0!")
-
         self.__price = value
 
+    @property
     @abstractmethod
-    def eating(self):
+    def increase_kgs(self):
         ...
+
+    def eating(self):
+        self.weight += self.increase_kgs

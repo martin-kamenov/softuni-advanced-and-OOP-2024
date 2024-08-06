@@ -2,11 +2,12 @@ from project.services.base_service import BaseService
 
 
 class MainService(BaseService):
-    CAPACITY = 30
+    SERVICE_CAPACITY = 30
+
 
     def __init__(self, name: str):
-        super().__init__(name, MainService.CAPACITY)
+        super().__init__(name, capacity=self.SERVICE_CAPACITY)
 
     @property
-    def type_of_service(self) -> str:
+    def service_type(self) -> str:
         return 'Main'
