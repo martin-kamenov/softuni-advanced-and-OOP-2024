@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-# from given_codes.extended_list import IntegerList
+from given_codes.extended_list import IntegerList
 
 class IntegerListTests(TestCase):
 
